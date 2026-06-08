@@ -90,8 +90,8 @@ Minimal on-chain component (Cosmos SDK module or CosmWasm).
 | --- | --- |
 | Transaction reference | `momotrack/proof_recorded` event |
 | Amount, currency, timestamp | Indexer-friendly attributes |
-| ZK commitments (anonymized parties) | — |
-| Oracle signature | — |
+| ZK commitments (anonymized parties) | - |
+| Oracle signature | - |
 
 Designed for low gas and small audit surface. Implementation in Rust targeting Cosmos SDK.
 
@@ -222,6 +222,6 @@ Oracle nodes are stateless validators + relay workers behind a load balancer. Sh
 
 ## See also
 
-- [HOW_IT_WORKS.md](./HOW_IT_WORKS.md) — Step-by-step flow and benefits
-- [DATA_SCHEMA.md](./DATA_SCHEMA.md) — Payload schemas
-- [ROADMAP.md](./ROADMAP.md) — Implementation timeline
+- [HOW_IT_WORKS.md](./HOW_IT_WORKS.md): Step-by-step flow and benefits
+- [DATA_SCHEMA.md](./DATA_SCHEMA.md): Payload schemas
+- [ROADMAP.md](./ROADMAP.md): Implementation timeline

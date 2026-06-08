@@ -191,9 +191,9 @@ Full threat model: [SECURITY_MODEL.md](./SECURITY_MODEL.md).
 
 - **One extra SDK import** alongside your existing aggregator integration
 - **Automatic on-chain proof** after each successful payment
-- **Reduced support load** — fewer screenshot disputes
-- **New use cases** — trustless P2P, conditional tontines, DeFi collateral, escrow
-- **No vendor lock-in** — works with your chosen aggregator and your compliance stack
+- **Reduced support load**: fewer screenshot disputes
+- **New use cases**: trustless P2P, conditional tontines, DeFi collateral, escrow
+- **No vendor lock-in**: works with your chosen aggregator and your compliance stack
 
 ## What MoMoTrack is not
 

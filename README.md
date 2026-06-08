@@ -64,10 +64,10 @@ sequenceDiagram
     Chain-->>App: Verifiable on-chain receipt
 ```
 
-1. **Integrate your aggregator** — PowerPay, Cotanipay, or another provider with your own API keys and compliance.
-2. **Add the MoMoTrack SDK** — Lightweight client for mobile or web.
-3. **Attest on success** — SDK masks sensitive data with ZK, oracle validates, Safrochain stores the proof.
-4. **Verify anywhere** — Query or subscribe to on-chain events; no manual proof steps for recipients.
+1. **Integrate your aggregator**: PowerPay, Cotanipay, or another provider with your own API keys and compliance.
+2. **Add the MoMoTrack SDK**: Lightweight client for mobile or web.
+3. **Attest on success**: SDK masks sensitive data with ZK, oracle validates, Safrochain stores the proof.
+4. **Verify anywhere**: Query or subscribe to on-chain events; no manual proof steps for recipients.
 
 | Document | Contents |
 | --- | --- |
@@ -79,13 +79,13 @@ sequenceDiagram
 
 ## Features
 
-- **Verification, not custody** — MoMoTrack never touches funds
-- **Aggregator support** — PowerPay, Cotanipay, and extensible provider adapters
-- **Privacy-first** — Client-side ZK; phone numbers never leave the device in plaintext
-- **On-chain receipts** — Transaction reference, amount, timestamp, and anonymized parties
-- **Opt-in** — Only SDK-routed successful transactions are recorded
-- **Multi-platform SDK** — TypeScript, React Native, and Flutter (roadmap)
-- **Open source** — MIT licensed, auditable, community-driven
+- **Verification, not custody**: MoMoTrack never touches funds
+- **Aggregator support**: PowerPay, Cotanipay, and extensible provider adapters
+- **Privacy-first**: Client-side ZK; phone numbers never leave the device in plaintext
+- **On-chain receipts**: Transaction reference, amount, timestamp, and anonymized parties
+- **Opt-in**: Only SDK-routed successful transactions are recorded
+- **Multi-platform SDK**: TypeScript, React Native, and Flutter (roadmap)
+- **Open source**: MIT licensed, auditable, community-driven
 
 ## Quick start
 
@@ -140,7 +140,7 @@ MoMoTrack-Oracle/
 | --- | --- | --- |
 | PowerPay | Planned | DRC |
 | Cotanipay | Planned | Central Africa |
-| Custom adapter | [Open an issue](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=provider_request.yml) | — |
+| Custom adapter | [Open an issue](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=provider_request.yml) | - |
 
 Want your aggregator listed? Use the [provider request template](.github/ISSUE_TEMPLATE/provider_request.yml).
 

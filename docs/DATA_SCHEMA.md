@@ -31,10 +31,10 @@ interface AttestInput {
   /** Unix timestamp (seconds) from aggregator */
   timestamp: number;
 
-  /** Sender MSISDN — used locally for ZK proof, never sent in plaintext */
+  /** Sender MSISDN: used locally for ZK proof, never sent in plaintext */
   senderMsisdn: string;
 
-  /** Receiver MSISDN — used locally for ZK proof, never sent in plaintext */
+  /** Receiver MSISDN: used locally for ZK proof, never sent in plaintext */
   receiverMsisdn: string;
 
   /** Optional app-level metadata (hashed or omitted on-chain if large) */

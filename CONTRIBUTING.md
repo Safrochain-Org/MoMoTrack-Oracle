@@ -146,8 +146,8 @@ This project follows the [Contributor Covenant](./CODE_OF_CONDUCT.md). Be respec
 
 ## Questions
 
-- **Usage questions** — [GitHub Discussions](https://github.com/Safrochain-Org/MoMoTrack-Oracle/discussions) or [Discord](https://discord.gg/safrochain)
-- **Bug reports** — [Issue tracker](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=bug_report.yml)
-- **Feature ideas** — [Feature request template](.github/ISSUE_TEMPLATE/feature_request.yml)
+- **Usage questions**: [GitHub Discussions](https://github.com/Safrochain-Org/MoMoTrack-Oracle/discussions) or [Discord](https://discord.gg/safrochain)
+- **Bug reports**: [Issue tracker](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=bug_report.yml)
+- **Feature ideas**: [Feature request template](.github/ISSUE_TEMPLATE/feature_request.yml)
 
 Maintainers aim to respond within a few business days.

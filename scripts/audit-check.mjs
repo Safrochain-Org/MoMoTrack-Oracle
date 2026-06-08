@@ -10,7 +10,7 @@ const root = new URL("..", import.meta.url).pathname;
 const lockfile = join(root, "package-lock.json");
 
 if (!existsSync(lockfile)) {
-  console.log("No package-lock.json — skipping dependency audit.");
+  console.log("No package-lock.json: skipping dependency audit.");
   process.exit(0);
 }
 

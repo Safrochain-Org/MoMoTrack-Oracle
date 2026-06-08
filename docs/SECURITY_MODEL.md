@@ -4,12 +4,12 @@ MoMoTrack is a verification oracle, not a payment rail. This document describes 
 
 ## Design principles
 
-1. **No custody** — MoMoTrack never holds, routes, or settles funds.
-2. **Minimal on-chain data** — Only fields required for verification are stored on Safrochain.
-3. **Client-side privacy** — Sensitive identifiers are processed and masked on the user device.
-4. **Cryptographic verifiability** — Every on-chain record links to a signed, provable attestation.
-5. **Transparency** — Open-source code (MIT) for public audit.
-6. **Opt-in** — Only transactions explicitly sent through the SDK are attested.
+1. **No custody**: MoMoTrack never holds, routes, or settles funds.
+2. **Minimal on-chain data**: Only fields required for verification are stored on Safrochain.
+3. **Client-side privacy**: Sensitive identifiers are processed and masked on the user device.
+4. **Cryptographic verifiability**: Every on-chain record links to a signed, provable attestation.
+5. **Transparency**: Open-source code (MIT) for public audit.
+6. **Opt-in**: Only transactions explicitly sent through the SDK are attested.
 
 ## Trust boundaries
 
@@ -138,6 +138,6 @@ Email [security@safrochain.com](mailto:security@safrochain.com). See [SECURITY.m
 
 ## Related documents
 
-- [HOW_IT_WORKS.md](./HOW_IT_WORKS.md) — End-to-end flow
-- [DATA_SCHEMA.md](./DATA_SCHEMA.md) — Payload and privacy mapping
-- [SECURITY.md](../SECURITY.md) — Vulnerability reporting process
+- [HOW_IT_WORKS.md](./HOW_IT_WORKS.md): End-to-end flow
+- [DATA_SCHEMA.md](./DATA_SCHEMA.md): Payload and privacy mapping
+- [SECURITY.md](../SECURITY.md): Vulnerability reporting process

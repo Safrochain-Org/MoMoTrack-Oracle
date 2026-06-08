@@ -8,7 +8,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 ## Phases
 
-### Phase 0 — Open source foundation ✅
+### Phase 0: Open source foundation ✅
 
 | Item | Status |
 | --- | --- |
@@ -17,7 +17,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 | Architecture and flow documentation | Done |
 | Data schema and security model docs | Done |
 
-### Phase 1 — SDK alpha (TypeScript)
+### Phase 1: SDK alpha (TypeScript)
 
 | Item | Status |
 | --- | --- |
@@ -29,7 +29,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 **Exit criteria:** Successful testnet attestation from Node.js example.
 
-### Phase 2 — Oracle MVP
+### Phase 2: Oracle MVP
 
 | Item | Status |
 | --- | --- |
@@ -42,7 +42,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 **Exit criteria:** End-to-end flow from SDK to on-chain event on testnet.
 
-### Phase 3 — On-chain module
+### Phase 3: On-chain module
 
 | Item | Status |
 | --- | --- |
@@ -54,7 +54,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 **Exit criteria:** Third party can verify proof without MoMoTrack team involvement.
 
-### Phase 4 — Provider adapters
+### Phase 4: Provider adapters
 
 | Provider | Status |
 | --- | --- |
@@ -65,7 +65,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 **Exit criteria:** Two production aggregators with documented setup guides.
 
-### Phase 5 — Multi-platform SDK
+### Phase 5: Multi-platform SDK
 
 | Platform | Status |
 | --- | --- |
@@ -75,7 +75,7 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 **Exit criteria:** Same attestation flow on iOS, Android, and web.
 
-### Phase 6 — Production hardening
+### Phase 6: Production hardening
 
 | Item | Status |
 | --- | --- |
@@ -102,9 +102,9 @@ Make every successful Mobile Money payment in Africa verifiable on Safrochain wi
 
 ## How to influence the roadmap
 
-1. **Vote with issues** — Open a [feature request](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=feature_request.yml).
-2. **Provider priority** — File a [provider request](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=provider_request.yml).
-3. **Contribute code** — See [CONTRIBUTING.md](../CONTRIBUTING.md); pick an unassigned Phase 1–2 issue.
+1. **Vote with issues**: Open a [feature request](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=feature_request.yml).
+2. **Provider priority**: File a [provider request](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues/new?template=provider_request.yml).
+3. **Contribute code**: See [CONTRIBUTING.md](../CONTRIBUTING.md); pick an unassigned Phase 1-2 issue.
 
 ## Versioning policy
 

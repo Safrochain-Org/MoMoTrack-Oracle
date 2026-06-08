@@ -105,11 +105,11 @@ MoMoTrack does not initiate payments or hold funds.
 
 ## Next steps
 
-- [How it works](./HOW_IT_WORKS.md) — Full 6-step flow
-- [Architecture](./ARCHITECTURE.md) — Components and deployment
-- [Data schema](./DATA_SCHEMA.md) — Attestation payload reference
-- [Security model](./SECURITY_MODEL.md) — Privacy and trust boundaries
-- [Roadmap](./ROADMAP.md) — What ships when
+- [How it works](./HOW_IT_WORKS.md): Full 6-step flow
+- [Architecture](./ARCHITECTURE.md): Components and deployment
+- [Data schema](./DATA_SCHEMA.md): Attestation payload reference
+- [Security model](./SECURITY_MODEL.md): Privacy and trust boundaries
+- [Roadmap](./ROADMAP.md): What ships when
 - [Contributing](../CONTRIBUTING.md)
 - [Security policy](../SECURITY.md)
 
