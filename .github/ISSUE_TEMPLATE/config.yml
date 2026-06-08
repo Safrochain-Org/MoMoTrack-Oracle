@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and discussions
+    url: https://github.com/Safrochain-Org/MoMoTrack-Oracle/discussions
+    about: Ask usage questions and share integration ideas.
+  - name: Safrochain Discord
+    url: https://discord.gg/safrochain
+    about: Real-time help for builders and integrators.
+  - name: Security reports
+    url: https://github.com/Safrochain-Org/MoMoTrack-Oracle/blob/main/SECURITY.md
+    about: Report vulnerabilities privately. Do not file public security issues.

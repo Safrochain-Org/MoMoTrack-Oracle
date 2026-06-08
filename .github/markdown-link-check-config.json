@@ -1,0 +1,20 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://github.com/.*/(issues|discussions|pull)"
+    },
+    {
+      "pattern": "^https://x.com/"
+    },
+    {
+      "pattern": "^https://oracle\\.testnet\\.momotrack\\.safrochain\\.com"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "https://github.com/Safrochain-Org/MoMoTrack-Oracle/blob/main/"
+    }
+  ],
+  "aliveStatusCodes": [200, 206, 403, 999]
+}

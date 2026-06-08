@@ -1,0 +1,85 @@
+name: Bug report
+description: Report something broken or not working as expected.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please search [existing issues](https://github.com/Safrochain-Org/MoMoTrack-Oracle/issues) first.
+
+        **Do not use this form for security vulnerabilities.** See [SECURITY.md](https://github.com/Safrochain-Org/MoMoTrack-Oracle/blob/main/SECURITY.md).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: The SDK throws an error when attesting a Cotanipay transaction on testnet.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: The attestation should be recorded on-chain with status `success`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to reproduce the behavior.
+      placeholder: |
+        1. Configure provider `powerpay` on testnet
+        2. Call `momotrack.attest({ ... })`
+        3. Observe error in console
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - SDK (TypeScript/JavaScript)
+        - SDK (React Native)
+        - SDK (Flutter)
+        - Oracle service
+        - Provider adapter
+        - Documentation
+        - CI / tooling
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Package version, commit SHA, or `main`.
+      placeholder: v0.1.0 or abc1234
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node version, network, provider.
+      placeholder: |
+        - OS: macOS 15
+        - Node: 20.11.0
+        - Network: safrochain-testnet
+        - Provider: powerpay
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Paste redacted logs. Remove API keys and phone numbers.
+      placeholder: Paste logs here.

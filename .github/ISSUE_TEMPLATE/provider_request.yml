@@ -1,0 +1,62 @@
+name: Provider request
+description: Request support for a new Mobile Money aggregator or regional provider.
+title: "provider: "
+labels: ["provider", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request integration for a Mobile Money provider. Maintainers use this to prioritize adapter work.
+
+  - type: input
+    id: provider_name
+    attributes:
+      label: Provider name
+      placeholder: e.g. PowerPay, Cotanipay, M-Pesa aggregator
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Region / countries
+      placeholder: e.g. DRC, Kenya, West Africa
+    validations:
+      required: true
+
+  - type: input
+    id: docs_url
+    attributes:
+      label: API documentation URL
+      placeholder: https://
+    validations:
+      required: false
+
+  - type: dropdown
+    id: access
+    attributes:
+      label: Do you have sandbox or test API access?
+      options:
+        - "Yes"
+        - "No, but I can help obtain it"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: How will your application use MoMoTrack with this provider?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I can contribute or co-maintain the provider adapter
+          required: false
+        - label: I can provide test credentials in a secure channel (not in this issue)
+          required: false

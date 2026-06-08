@@ -1,0 +1,34 @@
+name-template: v$RESOLVED_VERSION
+tag-template: v$RESOLVED_VERSION
+categories:
+  - title: Features
+    labels:
+      - enhancement
+      - provider
+  - title: Bug fixes
+    labels:
+      - bug
+  - title: Security
+    labels:
+      - security
+  - title: Documentation
+    labels:
+      - documentation
+  - title: Maintenance
+    labels:
+      - dependencies
+      - ci
+      - chore
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+version-resolver:
+  default: patch
+template: |
+  ## Summary
+
+  $CHANGES
+
+  ## Contributors
+
+  $CONTRIBUTORS
+
+  **Full changelog:** https://github.com/Safrochain-Org/MoMoTrack-Oracle/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
