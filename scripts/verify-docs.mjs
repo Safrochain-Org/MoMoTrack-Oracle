@@ -19,8 +19,13 @@ const requiredFiles = [
   ".github/ISSUE_TEMPLATE/feature_request.yml",
   ".github/ISSUE_TEMPLATE/provider_request.yml",
   ".github/ISSUE_TEMPLATE/config.yml",
+  "docs/README.md",
   "docs/GETTING_STARTED.md",
+  "docs/HOW_IT_WORKS.md",
   "docs/ARCHITECTURE.md",
+  "docs/DATA_SCHEMA.md",
+  "docs/SECURITY_MODEL.md",
+  "docs/ROADMAP.md",
 ];
 
 const contentChecks = [
@@ -30,7 +35,21 @@ const contentChecks = [
   },
   {
     file: "README.md",
-    includes: ["MoMoTrack", "MIT", "SECURITY.md", "CONTRIBUTING.md"],
+    includes: [
+      "MoMoTrack",
+      "MIT",
+      "SECURITY.md",
+      "CONTRIBUTING.md",
+      "HOW_IT_WORKS.md",
+    ],
+  },
+  {
+    file: "docs/HOW_IT_WORKS.md",
+    includes: ["verification and provenance layer", "zero-knowledge"],
+  },
+  {
+    file: "docs/DATA_SCHEMA.md",
+    includes: ["AttestInput", "OnChainProof"],
   },
   {
     file: "SECURITY.md",

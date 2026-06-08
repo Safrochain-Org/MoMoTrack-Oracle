@@ -1,6 +1,8 @@
 # Getting started
 
-This guide walks you through integrating MoMoTrack Oracle into your application on Safrochain testnet.
+This guide walks you through integrating MoMoTrack into your application on Safrochain testnet.
+
+Before you begin, read [HOW_IT_WORKS.md](./HOW_IT_WORKS.md) for the full payment-to-proof flow and [DATA_SCHEMA.md](./DATA_SCHEMA.md) for payload fields.
 
 ## Prerequisites
 
@@ -90,10 +92,25 @@ Replace the query command with the CLI or REST endpoint for your network version
 - [ ] Test transaction attested and visible on-chain
 - [ ] Webhook signatures validated on your backend
 
+## Integration model
+
+MoMoTrack sits **on top of** your existing aggregator integration:
+
+1. **You** own the PowerPay / Cotanipay API keys, webhooks, and compliance.
+2. **Your backend** confirms the payment succeeded.
+3. **The SDK** (on the client) generates the ZK proof and submits the attestation.
+4. **The oracle** validates and relays to Safrochain.
+
+MoMoTrack does not initiate payments or hold funds.
+
 ## Next steps
 
-- [Architecture overview](./ARCHITECTURE.md)
-- [Contributing guide](../CONTRIBUTING.md)
+- [How it works](./HOW_IT_WORKS.md) — Full 6-step flow
+- [Architecture](./ARCHITECTURE.md) — Components and deployment
+- [Data schema](./DATA_SCHEMA.md) — Attestation payload reference
+- [Security model](./SECURITY_MODEL.md) — Privacy and trust boundaries
+- [Roadmap](./ROADMAP.md) — What ships when
+- [Contributing](../CONTRIBUTING.md)
 - [Security policy](../SECURITY.md)
 
 ## Need help?

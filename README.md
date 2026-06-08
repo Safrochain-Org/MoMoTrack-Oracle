@@ -17,18 +17,34 @@
 
 ---
 
-MoMoTrack is an open-source oracle that turns Mobile Money payments into immutable, on-chain proofs on [Safrochain](https://safrochain.com). P2P apps, remittance platforms, tontines, and DeFi protocols can verify payments without screenshots, manual reconciliation, or trust-based disputes.
+MoMoTrack is a lightweight, open-source oracle that brings Mobile Money (MoMo) transactions on-chain. It is a **verification and provenance layer** on top of licensed aggregators (PowerPay, Cotanipay, and others), not a financial intermediary. P2P apps, remittance platforms, tontines, and DeFi protocols get immutable payment proofs on [Safrochain](https://safrochain.com) without screenshots, disputes, or manual reconciliation.
+
+> **Read the full explanation:** [docs/HOW_IT_WORKS.md](./docs/HOW_IT_WORKS.md)
 
 ## Why MoMoTrack
 
 | Problem | MoMoTrack solution |
 | --- | --- |
-| Payment disputes rely on screenshots | Cryptographic proof recorded on-chain |
+| "I sent but it didn't arrive" disputes | Cryptographic on-chain proof anyone can verify |
+| Screenshot-based proof of payment | Immutable attestation with amount, time, and reference |
 | Phone numbers exposed to third parties | Zero-knowledge proofs generated on the client device |
-| Manual back-office reconciliation | Automatic status, amount, and timestamp attestation |
-| Fragmented Mobile Money APIs | Unified SDK across major African aggregators |
+| Manual back-office reconciliation | Automatic recording after each successful payment |
+| Fragmented Mobile Money APIs | One SDK layer across major African aggregators |
 
 ## How it works
+
+```text
+Developer's Application
+        │
+        ▼
+MoMoTrack SDK (client-side)     ← ZK-proof + signed payload
+        │
+        ▼
+MoMoTrack Oracle (off-chain)    ← validation + relay
+        │
+        ▼
+Safrochain (on-chain)           ← immutable record + events
+```
 
 ```mermaid
 sequenceDiagram
@@ -40,24 +56,36 @@ sequenceDiagram
 
     App->>MoMo: Initiate payment (your API keys)
     MoMo-->>App: Transaction result
-    App->>SDK: Forward result
-    SDK->>SDK: Generate ZK proof (phone privacy)
+    App->>SDK: Forward success result
+    SDK->>SDK: ZK proof + sign payload
     SDK->>Oracle: Submit attestation
-    Oracle->>Chain: Record immutable proof
+    Oracle->>Oracle: Validate signature + proof
+    Oracle->>Chain: Record minimal proof
     Chain-->>App: Verifiable on-chain receipt
 ```
 
-1. **Integrate your provider** — Connect to PowerPay, Cotanipay, or another aggregator using your own credentials.
-2. **Add the MoMoTrack SDK** — Drop the lightweight client into your mobile or web app.
-3. **Capture and attest** — On success, the SDK applies a ZK proof, forwards the attestation to the oracle, and records the proof on Safrochain.
+1. **Integrate your aggregator** — PowerPay, Cotanipay, or another provider with your own API keys and compliance.
+2. **Add the MoMoTrack SDK** — Lightweight client for mobile or web.
+3. **Attest on success** — SDK masks sensitive data with ZK, oracle validates, Safrochain stores the proof.
+4. **Verify anywhere** — Query or subscribe to on-chain events; no manual proof steps for recipients.
+
+| Document | Contents |
+| --- | --- |
+| [HOW_IT_WORKS.md](./docs/HOW_IT_WORKS.md) | Full 6-step flow, components, benefits |
+| [ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Layers, deployment, extensibility |
+| [DATA_SCHEMA.md](./docs/DATA_SCHEMA.md) | Payload and on-chain record formats |
+| [SECURITY_MODEL.md](./docs/SECURITY_MODEL.md) | Threat model and privacy guarantees |
+| [ROADMAP.md](./docs/ROADMAP.md) | Implementation phases |
 
 ## Features
 
+- **Verification, not custody** — MoMoTrack never touches funds
 - **Aggregator support** — PowerPay, Cotanipay, and extensible provider adapters
-- **Privacy-first** — ZK proofs on the client; phone numbers never leave the device in plaintext
-- **On-chain receipts** — Transaction status, amount, and timestamp written to Safrochain
-- **Multi-platform SDK** — TypeScript/JavaScript, React Native, and Flutter (roadmap)
-- **Open source** — MIT licensed, community-driven, free to use
+- **Privacy-first** — Client-side ZK; phone numbers never leave the device in plaintext
+- **On-chain receipts** — Transaction reference, amount, timestamp, and anonymized parties
+- **Opt-in** — Only SDK-routed successful transactions are recorded
+- **Multi-platform SDK** — TypeScript, React Native, and Flutter (roadmap)
+- **Open source** — MIT licensed, auditable, community-driven
 
 ## Quick start
 
@@ -93,12 +121,17 @@ See [docs/GETTING_STARTED.md](./docs/GETTING_STARTED.md) for environment setup, 
 
 ```text
 MoMoTrack-Oracle/
-├── docs/                  # Guides and architecture
-├── .github/               # Issue/PR templates and CI workflows
+├── docs/
+│   ├── HOW_IT_WORKS.md    # End-to-end flow (start here)
+│   ├── ARCHITECTURE.md    # Technical components
+│   ├── DATA_SCHEMA.md     # Payload schemas
+│   ├── SECURITY_MODEL.md  # Threat model
+│   └── ROADMAP.md         # Implementation plan
+├── .github/               # Issue/PR templates and CI
 ├── LICENSE                # MIT
-├── CONTRIBUTING.md        # Contribution guide
-├── SECURITY.md            # Vulnerability reporting
-└── CHANGELOG.md           # Release history
+├── CONTRIBUTING.md
+├── SECURITY.md
+└── CHANGELOG.md
 ```
 
 ## Supported providers
